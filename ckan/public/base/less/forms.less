@@ -104,10 +104,10 @@ textarea {
 
 .form-actions {
   background: none;
-  margin-left: -@gutterX;
-  margin-right: -@gutterX;
-  margin-bottom: 0; // Prevents reduces the padding when included in a module.
-  padding-bottom: 0;
+  // margin-left: -@gutterX;
+  // margin-right: -@gutterX;
+  // margin-bottom: 0; // Prevents reduces the padding when included in a module.
+  // padding-bottom: 0;
 }
 @media (min-width: @screen-sm) {
   .form-actions {
@@ -266,8 +266,8 @@ textarea {
 .simple-input .field input {
   width: 100%;
   height: auto;
-  margin: 0 -7px; // Pull input out into gutter
-  padding: 7px 5px;
+  margin: 0; // Pull input out into gutter
+  padding: @grid-gutter-width/6 @grid-gutter-width/2;
 }
 
 .simple-input .field .btn-search {
@@ -277,7 +277,7 @@ textarea {
   width: 17px;
   padding: 0;
   top: 50%;
-  right: 0;
+  right: @grid-gutter-width/3;
   margin-top: -10px;
   background-color: transparent;
   border: none;
@@ -340,13 +340,13 @@ textarea {
   font-size: 0; // Remove whitespace between fields.
 }
 
-.control-custom label {
-  margin-bottom: 0;
-}
+// .control-custom label {
+//   margin-bottom: 0;
+// }
 
 .control-custom input {
   .border-radius(0);
-  width: 140px;
+  // width: 140px;
 }
 
 .control-custom input:last-of-type {
