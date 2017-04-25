@@ -16,19 +16,21 @@
 
 
 .media-grid {
-  .list-unstyled;
-  .clearfix;
-  margin: 0 -25px;
-  padding-bottom: 15px;
-  background: lighten(@layoutBackgroundColor, 5%) url("@{bgPath}");
-  border: 1px solid @moduleHeadingBorderColor;
-  border-width: 1px 0;
+    .list-unstyled;
+    .clearfix;
+    min-height: 205px;
+    // margin: 0 -25px;
+    // padding-bottom: 15px;
+    background: lighten(@layoutBackgroundColor, 5%) url("@{bgPath}");
+    border: 1px solid @moduleHeadingBorderColor;
+    border-width: 1px 0;
 }
-@media (min-width: 768px) {
-  .media-grid {
-    margin-left:-27px;
-  }
-}
+
+// @media (min-width: @screen-sm-min) {
+//     .media-grid {
+//         margin-left: -27px;
+//     }
+// }
 
 .media-item {
   position: relative;
@@ -89,6 +91,7 @@
 
 .media-image {
   .border-radius(4px);
+  max-width: 100%;
 }
 
 .media-heading {

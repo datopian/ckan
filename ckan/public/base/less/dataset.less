@@ -3,7 +3,7 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: @screen-sm) {
   .dataset-item {
     word-wrap:break-word;
   }
@@ -34,7 +34,7 @@
 .dataset-private {
   margin-right: 10px;
   text-transform: uppercase;
-  .glyphicon glyphicon-lock {
+  .fa .fa-lock {
     width: 9px;
   }
   &.pull-right {
@@ -98,7 +98,7 @@
   top: 14px;
   right: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: @screen-sm) {
   .resource-item .btn-group {
     display:none;
   }
@@ -239,7 +239,7 @@
       border: 1px solid @moduleHeadingBorderColor;
       overflow: hidden;
       .border-radius(3px);
-      .icon {
+      .fa {
         float: left;
         width: 50px;
         height: 50px;
@@ -273,7 +273,7 @@
       &:hover {
         text-decoration: none;
         border-color: @layoutLinkColor;
-        .icon {
+        .fa {
           background-color: @layoutLinkColor;
           color: @navActiveBackgroundColor;
         }
@@ -292,7 +292,7 @@
       a {
         text-decoration: none;
         border-color: @layoutLinkColor;
-        .icon {
+        .fa {
           background-color: @layoutLinkColor;
           color: @navActiveBackgroundColor;
         }
