@@ -74,7 +74,7 @@
   <div class="container">
     <div class="navbar-right">
       <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-      <span class="fa fa-menu-hamburger"></span>
+      <span class="fa fa-bars"></span>
       </button>
     </div>
     {# The .header-image class hides the main text and uses image replacement for the title #}
@@ -114,7 +114,7 @@
         <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
+            <input id="field-sitewide-search" class="form-control" type="text" name="q" placeholder="{{ _('Search') }}" />
             <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
           </div>
         </form>
