@@ -15,7 +15,7 @@ this.ckan.module('resource-view-reorder', function($, _) {
       title: '<h1></h1>',
       button: [
         '<a href="javascript:;" class="btn">',
-        '<i class="icon-reorder"></i>',
+        '<i class="glyphicon glyphicon-reorder"></i>',
         '<span></span>',
         '</a>'
       ].join('\n'),
@@ -26,8 +26,8 @@ this.ckan.module('resource-view-reorder', function($, _) {
         '</div>'
       ].join('\n'),
       saving: [
-        '<span class="saving muted m-right">',
-        '<i class="icon-spinner icon-spin"></i>',
+        '<span class="saving text-muted m-right">',
+        '<i class="glyphicon glyphicon-spinner icon-spin"></i>',
         '<span></span>',
         '</span>'
       ].join('\n')

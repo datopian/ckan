@@ -78,13 +78,13 @@ this.ckan.module('confirm-action', function (jQuery, _) {
       if (!this.modal) {
         var element = this.modal = jQuery(this.options.template);
         element.on('click', '.btn-primary', this._onConfirmSuccess);
-        element.on('click', '.btn-cancel', this._onConfirmCancel);
+        element.on('click', '.btn-danger', this._onConfirmCancel);
         element.modal({show: false});
 
         element.find('h3').text(this.i18n('heading'));
         element.find('.modal-body').text(this.i18n('content'));
         element.find('.btn-primary').text(this.i18n('confirm'));
-        element.find('.btn-cancel').text(this.i18n('cancel'));
+        element.find('.btn-danger').text(this.i18n('cancel'));
       }
       return this.modal;
     },

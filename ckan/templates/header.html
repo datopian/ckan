@@ -5,12 +5,12 @@
       {% block header_account_container_content %}
         {% if c.userobj %}
           <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
-            <ul class="unstyled">
+            <ul class="list-unstyled">
               {% block header_account_logged %}
               {% if c.userobj.sysadmin %}
                 <li>
                   <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
-                    <i class="icon-legal" aria-hidden="true"></i>
+                    <i class="glyphicon glyphicon-legal" aria-hidden="true"></i>
                     <span class="text">{{ _('Admin') }}</span>
                   </a>
                 </li>
@@ -25,7 +25,7 @@
               <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
                 {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities) %}
                 <a href="{{ h.url_for(controller='user', action='dashboard') }}" title="{{ notifications_tooltip }}">
-                  <i class="icon-dashboard" aria-hidden="true"></i>
+                  <i class="glyphicon glyphicon-dashboard" aria-hidden="true"></i>
                   <span class="text">{{ _('Dashboard') }}</span>
                   <span class="badge">{{ new_activities }}</span>
                 </a>
@@ -33,7 +33,7 @@
               {% block header_account_settings_link %}
                 <li>
                   <a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}" title="{{ _('Edit settings') }}">
-                    <i class="icon-cog" aria-hidden="true"></i>
+                    <i class="glyphicon glyphicon-cog" aria-hidden="true"></i>
                     <span class="text">{{ _('Settings') }}</span>
                   </a>
                 </li>
@@ -41,7 +41,7 @@
               {% block header_account_log_out_link %}
                 <li>
                   <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
-                    <i class="icon-signout" aria-hidden="true"></i>
+                    <i class="glyphicon glyphicon-signout" aria-hidden="true"></i>
                     <span class="text">{{ _('Log out') }}</span>
                   </a>
                 </li>
@@ -51,7 +51,7 @@
           </div>
         {% else %}
           <nav class="account not-authed">
-            <ul class="unstyled">
+            <ul class="list-unstyled">
               {% block header_account_notlogged %}
               <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
               {% if h.check_access('user_create') %}
@@ -72,11 +72,11 @@
     {% endif %}
   {% endblock %}
   <div class="container">
-    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+    <div class="navbar-right">
+      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+    </div>
     {# The .header-image class hides the main text and uses image replacement for the title #}
     <hgroup class="{{ g.header_class }} pull-left">
 
@@ -93,7 +93,7 @@
 
     </hgroup>
 
-    <div class="nav-collapse collapse">
+    <div class="navbar-collapse collapse">
 
       {% block header_site_navigation %}
         <nav class="section navigation">
@@ -115,7 +115,7 @@
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
             <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
+            <button class="btn-search" type="submit"><i class="glyphicon glyphicon-search"></i></button>
           </div>
         </form>
       {% endblock %}

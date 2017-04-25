@@ -30,9 +30,9 @@ describe('ckan.notify()', function () {
     assert.equal(this.element.find('span').html(), '&lt;script&gt;');
   });
 
-  it('should default the class to "alert-error"', function () {
+  it('should default the class to "alert-danger"', function () {
     ckan.notify('test');
-    assert.ok(this.element.find('.alert').hasClass('alert-error'));
+    assert.ok(this.element.find('.alert').hasClass('alert-danger'));
   });
 
   it('should allow a type to be provided', function () {

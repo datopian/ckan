@@ -83,7 +83,8 @@
 
 .masthead {
   .clearfix();
-  min-height: 55px;
+  // min-height: 55px;
+  padding: @grid-gutter-width/3 0;
   color: @mastheadTextColor;
   background: @mastheadBackgroundColor url("@{bgPath}");
 
@@ -119,7 +120,7 @@
     }
   }
 
-  .nav-collapse {
+  .navbar-collapse {
     padding-top:10px;
   }
 
@@ -161,20 +162,20 @@
     }
   }
 
-  .btn-navbar,
-  .btn-navbar:hover,
-  .btn-navbar:focus,
-  .btn-navbar:active,
-  .btn-navbar.active,
-  .btn-navbar.disabled,
-  .btn-navbar[disabled] {
+  .navbar-btn,
+  .navbar-btn:hover,
+  .navbar-btn:focus,
+  .navbar-btn:active,
+  .navbar-btn.active,
+  .navbar-btn.disabled,
+  .navbar-btn[disabled] {
     background-color: darken(@mastheadBackgroundColor, 10%);
     background-image: none;
     border:none;
     .box-shadow(none);
     text-shadow: none;
     margin-top:15px;
-    .icon-bar {
+    .glyphicon glyphicon-bar {
       margin-right:0;
     }
   }
@@ -188,7 +189,7 @@
 }
 
 @media (min-width: 980px) {
-  .masthead  .nav-collapse {
+  .masthead  .navbar-collapse {
     float:right;
   }
 }
@@ -202,7 +203,7 @@
   }
   .masthead .section {
     float: none;
-    .nav-collapse {
+    .navbar-collapse {
       margin-bottom: @gutterX;
     }
   }

@@ -27,7 +27,7 @@ Example:
             {% block heading_private %}
               {% if package.private %}
                 <span class="dataset-private label label-inverse">
-                  <i class="icon-lock"></i>
+                  <i class="glyphicon glyphicon-lock"></i>
                   {{ _('Private') }}
                 </span>
               {% endif %}
@@ -39,7 +39,7 @@ Example:
               {% if package.get('state', '').startswith('draft') %}
                 <span class="label label-info">{{ _('Draft') }}</span>
               {% elif package.get('state', '').startswith('deleted') %}
-                <span class="label label-important">{{ _('Deleted') }}</span>
+                <span label label-danger">{{ _('Deleted') }}</span>
               {% endif %}
               {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
             {% endblock %}
@@ -61,7 +61,7 @@ Example:
       {% block resources %}
         {% if package.resources and not hide_resources %}
           {% block resources_outer %}
-            <ul class="dataset-resources unstyled">
+            <ul class="dataset-resources list-unstyled">
               {% block resources_inner %}
                 {% for resource in h.dict_list_reduce(package.resources, 'format') %}
                 <li>

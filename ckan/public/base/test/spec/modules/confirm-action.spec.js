@@ -63,7 +63,7 @@ describe('ckan.module.ConfirmActionModule()', function () {
       // Not an ideal check as this implementation could be done in many ways.
       assert.calledTwice(target);
       assert.calledWith(target, 'click', '.btn-primary', this.module._onConfirmSuccess);
-      assert.calledWith(target, 'click', '.btn-cancel', this.module._onConfirmCancel);
+      assert.calledWith(target, 'click', '.btn-danger', this.module._onConfirmCancel);
 
       target.restore();
     });
@@ -81,7 +81,7 @@ describe('ckan.module.ConfirmActionModule()', function () {
       assert.equal(target.find('h3').text(), i18n.heading.fetch());
       assert.equal(target.find('.modal-body').text(), i18n.content.fetch());
       assert.equal(target.find('.btn-primary').text(), i18n.confirm.fetch());
-      assert.equal(target.find('.btn-cancel').text(), i18n.cancel.fetch());
+      assert.equal(target.find('.btn-danger').text(), i18n.cancel.fetch());
     });
   });
 

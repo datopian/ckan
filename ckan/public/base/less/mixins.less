@@ -11,6 +11,10 @@
   hyphens: auto;
 }
 
+.border-radius(@size){
+  border-radius: @size;
+};
+
 .transform (@func) {
   -webkit-transform: @arguments;
   -moz-transform: @arguments;
@@ -85,7 +89,7 @@ a.tag:hover {
   }
 }
 
-.unstyled {
+.list-unstyled {
   margin: 0;
   list-style: none;
 }
@@ -102,7 +106,7 @@ a.tag:hover {
 
 .simple-list {
   .clearfix;
-  .unstyled;
+  .list-unstyled;
 
   & > li {
     .simple-item;

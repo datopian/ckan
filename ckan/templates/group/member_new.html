@@ -11,7 +11,7 @@
   </h1>
   {% block form %}
   <form class="dataset-form form-horizontal add-member-form" method='post' id="add-member-form">
-    <div class="row-fluid">
+    <div class="row">
       <div class="control-group control-medium">
         {% if not user %}
           <label class="control-label" for="username">
@@ -74,7 +74,7 @@
   {{ super() }}
   <div class="module module-narrow module-shallow">
     <h2 class="module-heading">
-      <i class="icon-large icon-info-sign"></i>
+      <i class="glyphicon glyphicon-large icon-info-sign"></i>
       {{ _('What are roles?') }}
     </h2>
     <div class="module-content">

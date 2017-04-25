@@ -9,17 +9,17 @@
 
   <form method="post" action="{{ action }}" >
     <button class="btn btn-primary" name="save" type="submit">
-      <i class="icon-cloud-upload"></i> {{ _('Upload to DataStore') }}
+      <i class="glyphicon glyphicon-cloud-upload"></i> {{ _('Upload to DataStore') }}
     </button>
   </form>
 
   {% if status.error and status.error.message %}
     {% set show_table = false %}
-    <div class="alert alert-error">
+    <div class="alert alert-danger">
       <strong>{{ _('Upload error:') }}</strong> {{ status.error.message }}
     </div>
   {% elif status.task_info and status.task_info.error %}
-    <div class="alert alert-error">
+    <div class="alert alert-danger">
       {% if status.task_info.error is string %}
         {# DataPusher < 0.0.3 #}
         <strong>{{ _('Error:') }}</strong> {{ status.task_info.error }}
@@ -66,7 +66,7 @@
         {% set class = ' failure' if icon == 'exclamation' else ' success' %}
         {% set popover_content = 'test' %}
         <li class="item no-avatar{{ class }}">
-          <i class="icon icon-{{ icon }}"></i>
+          <i class="icon glyphicon glyphicon-{{ icon }}"></i>
           <p>
             {{ item.message | urlize }}<br>
             <span class="date" title="{{ h.render_datetime(item.timestamp, with_hours=True) }}">
@@ -77,8 +77,8 @@
         </li>
       {% endfor %}
       <li class="item no-avatar">
-        <i class="icon icon-info"></i>
-        <p class="muted">{{ _('End of log') }}</p>
+        <i class="icon glyphicon glyphicon-info"></i>
+        <p class="text-muted">{{ _('End of log') }}</p>
       </li>
     </ul>
   {% endif %}

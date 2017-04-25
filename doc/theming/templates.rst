@@ -699,7 +699,7 @@ Edit your ``example_theme_most_popular_groups.html`` file to look like this:
 This simply wraps the code in a ``<div class="box">``,
 a ``<header class="module-heading">``,
 and a ``<section class="module-content">``. We also added Bootstrap's
-``class="unstyled"`` to the ``<ul>`` tag to get rid of the bullet points.
+``class="list-unstyled"`` to the ``<ul>`` tag to get rid of the bullet points.
 If you reload the `CKAN front page`_, the most popular groups should look much
 better.
 
