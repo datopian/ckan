@@ -14,20 +14,20 @@ this.ckan.module('resource-view-reorder', function($, _) {
     template: {
       title: '<h1></h1>',
       button: [
-        '<a href="javascript:;" class="btn">',
-        '<i class="glyphicon glyphicon-reorder"></i>',
+        '<a href="javascript:;" class="btn btn-default">',
+        '<i class="fa fa-reorder"></i>',
         '<span></span>',
         '</a>'
       ].join('\n'),
       form_actions: [
         '<div class="form-actions">',
-        '<a href="javascript:;" class="cancel btn pull-left"></a>',
+        '<a href="javascript:;" class="cancel btn btn-default pull-left"></a>',
         '<a href="javascript:;" class="save btn btn-primary"></a>',
         '</div>'
       ].join('\n'),
       saving: [
         '<span class="saving text-muted m-right">',
-        '<i class="glyphicon glyphicon-spinner icon-spin"></i>',
+        '<i class="fa fa-spinner icon-spin"></i>',
         '<span></span>',
         '</span>'
       ].join('\n')
