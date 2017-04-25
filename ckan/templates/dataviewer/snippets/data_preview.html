@@ -5,7 +5,7 @@
   {% else %}
     <div class="data-viewer-error js-hide">
       <p class="text-danger">
-        <i class="glyphicon glyphicon-info-sign"></i>
+        <i class="fa fa-info-sign"></i>
         {{ _('This resource can not be previewed at the moment.') }}
         <a href="#" data-toggle="collapse" data-target="#data-view-error">
           {{ _('Click here for more information.') }}
@@ -13,8 +13,8 @@
       </p>
       <p id="data-view-error" class="collapse"></p>
       <p>
-        <a href="{{ raw_resource_url }}" class="btn btn-large resource-url-analytics" target="_blank">
-          <i class="glyphicon glyphicon-large icon-download"></i>
+        <a href="{{ raw_resource_url }}" class="btn btn-lg resource-url-analytics" target="_blank">
+          <i class="fa fa-large icon-download"></i>
           {{ _('Download resource') }}
         </a>
       </p>

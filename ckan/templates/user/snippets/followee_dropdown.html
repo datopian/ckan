@@ -1,17 +1,17 @@
 {% macro followee_icon(type) -%}
   {% if type == 'dataset' %}
-    <i class="glyphicon glyphicon-sitemap"></i>
+    <i class="fa fa-sitemap"></i>
   {% elif type == 'user' %}
-    <i class="glyphicon glyphicon-user"></i>
+    <i class="fa fa-user"></i>
   {% elif type == 'group' %}
-    <i class="glyphicon glyphicon-group"></i>
+    <i class="fa fa-group"></i>
   {% elif type == 'organization' %}
-    <i class="glyphicon glyphicon-building"></i>
+    <i class="fa fa-building"></i>
   {% endif %}
 {%- endmacro %}
 
 <div id="followee-filter" class="pull-right">
-  <a href="#followee-popover" class="btn" title="{{ _('Activity from:') }} {{ context.context }}">
+  <a href="#followee-popover" class="btn btn-default" title="{{ _('Activity from:') }} {{ context.context }}">
     <span>{{ _('Activity from:') }}</span>
     <strong>{{ context.context }}</strong>
     <span class="caret"></span>
@@ -19,7 +19,7 @@
   <form id="followee-popover" action="/dashboard" class="dropdown js-hide">
     <div class="popover-header">
       <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <span class="add-on input-group-addon"><i class="fa fa-search"></i></span>
         <input type="text" name="q" placeholder="{{ _('Search list...') }}" value="{{context.q}}" autocomplete="off">
       </div>
     </div>
@@ -27,7 +27,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="everything {% if context.selected_id == False %} active{% endif %}">
           <a href="{{ h.url_for(controller='user', action='dashboard') }}">
-            <i class="glyphicon glyphicon-star"></i>
+            <i class="fa fa-star"></i>
             <span>Everything</span>
           </a>
         </li>
