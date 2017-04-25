@@ -526,7 +526,7 @@ def _link_to(text, *args, **kwargs):
         if kwargs.pop('inner_span', None):
             text = literal('<span>') + text + literal('</span>')
         if icon:
-            text = literal('<i class="icon-%s"></i> ' % icon) + text
+            text = literal('<i class="fa fa-%s"></i> ' % icon) + text
         return text
 
     icon = kwargs.pop('icon', None)
@@ -615,7 +615,7 @@ def build_nav_main(*args):
 def build_nav_icon(menu_item, title, **kw):
     '''Build a navigation item used for example in ``user/read_base.html``.
 
-    Outputs ``<li><a href="..."><i class="icon.."></i> title</a></li>``.
+    Outputs ``<li><a href="..."><i class="fa fa-.."></i> title</a></li>``.
 
     :param menu_item: the name of the defined menu item defined in
       config/routing as the named route of the same name
