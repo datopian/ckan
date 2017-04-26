@@ -8533,6 +8533,12 @@ fieldset[disabled] .control-custom.disabled .checkbox.btn.focus {
   float: right;
   margin-top: -3px;
 }
+.btn :not(.fa-label),
+.nav-tabs :not(.fa-label),
+.btn .fa,
+.nav-tabs .fa {
+  margin-right: 3px;
+}
 .no-nav .page-header {
   border-radius: 3px 3px 0 0;
 }
