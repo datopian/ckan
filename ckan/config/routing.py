@@ -307,7 +307,7 @@ def make_map():
                       'activity',
                   ])))
         m.connect('group_about', '/group/about/{id}', action='about',
-                  ckan_icon='info-sign'),
+                  ckan_icon='info-circle'),
         m.connect('group_edit', '/group/edit/{id}', action='edit',
                   ckan_icon='edit')
         m.connect('group_members', '/group/members/{id}', action='members',
@@ -334,7 +334,7 @@ def make_map():
                   action='activity', ckan_icon='clock-o')
         m.connect('organization_read', '/organization/{id}', action='read')
         m.connect('organization_about', '/organization/about/{id}',
-                  action='about', ckan_icon='info-sign')
+                  action='about', ckan_icon='info-circle')
         m.connect('organization_read', '/organization/{id}', action='read',
                   ckan_icon='sitemap')
         m.connect('organization_edit', '/organization/edit/{id}',

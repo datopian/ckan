@@ -197,7 +197,7 @@ def register_group_plugins(map):
                         action='activity', ckan_icon='clock-o'),
             map.connect('%s_about' % group_type, '/%s/about/{id}' % group_type,
                         controller=group_controller,
-                        action='about', ckan_icon='info-sign')
+                        action='about', ckan_icon='info-circle')
             map.connect('%s_bulk_process' % group_type,
                         '/%s/bulk_process/{id}' % group_type,
                         controller=group_controller,
