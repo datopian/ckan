@@ -34,7 +34,7 @@
               <li>
                 <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
                   {% if res.resource_type in ('listing', 'service') %}
-                    <i class="fa fa-eye-open"></i> {{ _('View') }}
+                    <i class="fa fa-eye"></i> {{ _('View') }}
                   {% elif  res.resource_type == 'api' %}
                     <i class="fa fa-key"></i> {{ _('API Endpoint') }}
                   {% elif not res.has_views or not res.can_be_previewed %}
@@ -112,7 +112,7 @@
                   <p>{{ _("There are no views created for this resource yet.") }}</p>
                   {% if h.check_access('resource_view_create', {'resource_id': c.resource.id}) %}
                     <p class="text-muted">
-                      <i class="fa fa-info-sign"></i>
+                      <i class="fa fa-info-circle"></i>
                       {{ _("Not seeing the views you were expecting?")}}
                       <a href="javascript:void(0);" data-toggle="collapse" data-target="#data-view-info">
                         {{ _('Click here for more information.') }}</a>
