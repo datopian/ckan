@@ -194,7 +194,7 @@ def register_group_plugins(map):
             map.connect('%s_activity' % group_type,
                         '/%s/activity/{id}/{offset}' % group_type,
                         controller=group_controller,
-                        action='activity', ckan_icon='time'),
+                        action='activity', ckan_icon='clock-o'),
             map.connect('%s_about' % group_type, '/%s/about/{id}' % group_type,
                         controller=group_controller,
                         action='about', ckan_icon='info-sign')
