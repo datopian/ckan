@@ -66,8 +66,9 @@ textarea {
 .control-medium input,
 .control-medium select,
 .control-medium textarea {
-  width: 320px;
+    width: calc(50% - @grid-gutter-width/2);
 }
+
 @media (max-width: @screen-sm) {
   .control-medium input,
   .control-medium select,
@@ -104,6 +105,7 @@ textarea {
 
 .form-actions {
   background: none;
+  overflow: auto;
   // margin-left: -@gutterX;
   // margin-right: -@gutterX;
   // margin-bottom: 0; // Prevents reduces the padding when included in a module.
@@ -476,7 +478,7 @@ textarea {
   .clearfix;
   color: @stagesTextColor;
   counter-reset: stage;
-  margin: -@gutterY -@gutterX @gutterY;
+  margin: @grid-gutter-width/2 0;
   overflow: hidden;
 }
 
