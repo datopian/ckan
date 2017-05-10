@@ -178,7 +178,7 @@ Examples:
   {{ form.prepend('slug', id='field-slug', prepend='/dataset/', label=_('Slug'), value=data.slug, error=errors.slug) }}
 
 #}
-{% macro prepend(name, id='', label='', prepend='', value='', placeholder='', type='text', error="", classes=[], attrs={'class':'form-control'}, is_required=false) %}
+{% macro prepend(name, id='', label='', prepend='', value='', placeholder='', type='text', error="", classes=['control-full'], attrs={'class':'form-control'}, is_required=false) %}
   {# We manually append the error here as it needs to be inside the .input-group block #}
   {% set classes = (classes|list) %}
   {% do classes.append('error') if error %}
