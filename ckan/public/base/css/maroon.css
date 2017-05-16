@@ -7517,7 +7517,7 @@ textarea {
 }
 .control-custom .checkbox {
   display: inline-block;
-  margin-left: 5px;
+  margin: 2px 0 2px 10px;
 }
 .control-custom .checkbox input {
   width: auto;
@@ -7538,50 +7538,36 @@ textarea {
   text-decoration: none;
 }
 .control-custom .checkbox.btn {
-  border-radius: 15px;
   position: relative;
-  top: 0;
-  left: 5px;
-  height: 1px;
-  width: 9px;
-  padding: 3px 8px;
-  line-height: 18px;
 }
-.control-custom .checkbox.btn span {
-  display: none;
-  width: 30px;
-}
-.control-custom .checkbox.btn:before {
-  position: relative;
-  top: 1px;
-  left: -1px;
-  color: #fff;
+.control-custom .btn :not(.fa-label) {
+  margin-right: 0;
 }
 .control-custom .checkbox.btn input {
   display: none;
 }
 .control-custom.disabled .checkbox.btn {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .control-custom.disabled .checkbox.btn:focus,
 .control-custom.disabled .checkbox.btn.focus {
   color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
+  background-color: #c9302c;
+  border-color: #761c19;
 }
 .control-custom.disabled .checkbox.btn:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #c9302c;
+  border-color: #ac2925;
 }
 .control-custom.disabled .checkbox.btn:active,
 .control-custom.disabled .checkbox.btn.active,
 .open > .dropdown-toggle.control-custom.disabled .checkbox.btn {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #c9302c;
+  border-color: #ac2925;
 }
 .control-custom.disabled .checkbox.btn:active:hover,
 .control-custom.disabled .checkbox.btn.active:hover,
@@ -7593,8 +7579,8 @@ textarea {
 .control-custom.disabled .checkbox.btn.active.focus,
 .open > .dropdown-toggle.control-custom.disabled .checkbox.btn.focus {
   color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
+  background-color: #ac2925;
+  border-color: #761c19;
 }
 .control-custom.disabled .checkbox.btn:active,
 .control-custom.disabled .checkbox.btn.active,
@@ -7610,11 +7596,11 @@ fieldset[disabled] .control-custom.disabled .checkbox.btn:focus,
 .control-custom.disabled .checkbox.btn.disabled.focus,
 .control-custom.disabled .checkbox.btn[disabled].focus,
 fieldset[disabled] .control-custom.disabled .checkbox.btn.focus {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .control-custom.disabled .checkbox.btn .badge {
-  color: #337ab7;
+  color: #d9534f;
   background-color: #fff;
 }
 .alert-danger a,
