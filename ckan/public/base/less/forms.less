@@ -357,7 +357,7 @@ textarea {
 
 .control-custom .checkbox {
   display: inline-block;
-  margin-left: 5px;
+  margin: 2px 0 2px @grid-gutter-width/3;
 }
 
 .control-custom .checkbox input {
@@ -384,26 +384,11 @@ textarea {
 // JavaScript Enabled Remove Button
 
 .control-custom .checkbox.btn {
-  .border-radius(15px);
   position: relative;
-  top: 0;
-  left: 5px;
-  height: 1px;
-  width: 9px;
-  padding: 3px 8px;
-  line-height: 18px;
 }
 
-.control-custom .checkbox.btn span {
-  display: none;
-  width: 30px;
-}
-
-.control-custom .checkbox.btn:before {
-  position: relative;
-  top: 1px;
-  left: -1px;
-  color: #fff;
+.control-custom .btn :not(.fa-label){
+  margin-right: 0;
 }
 
 .control-custom .checkbox.btn input {
@@ -411,7 +396,7 @@ textarea {
 }
 
 .control-custom.disabled .checkbox.btn {
-  .btn-primary;
+  .btn-danger;
 }
 
 // Errors
