@@ -73,7 +73,7 @@ this.ckan.module('follow', function($, _) {
 				this.el.html('<i class="fa fa-remove-sign"></i> ' + this.i18n('unfollow')).removeClass('btn-success').addClass('btn-danger');
 			} else {
 				options.action = 'follow';
-				this.el.html('<i class="fa fa-plus-sign"></i> ' + this.i18n('follow')).removeClass('btn-danger').addClass('btn-success');
+				this.el.html('<i class="fa fa-plus"></i> ' + this.i18n('follow')).removeClass('btn-danger').addClass('btn-success');
 			}
 			sandbox.publish('follow-' + options.action + '-' + options.id);
 		}
