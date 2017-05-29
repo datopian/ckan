@@ -5,7 +5,7 @@
 
 {% if following %}
   <a href="{{ h.url_for(controller=controller, action='unfollow', id=obj_id) }}" class="{% block following_class %}btn btn-danger{% endblock %}" data-module="follow" data-module-type="{{ obj_type }}" data-module-id="{{ obj_id }}" data-module-action="unfollow">
-    <i class="fa fa-remove-sign"></i>
+    <i class="fa fa-remove"></i>
     {{ _('Unfollow') }}
   </a>
 {% else %}
