@@ -10043,6 +10043,10 @@ h4 small {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+#followee-filter .btn .caret {
+  position: relative;
+  top: 9px;
+}
 .dashboard-context {
   position: relative;
   margin-bottom: 20px;
