@@ -177,7 +177,7 @@ this.ckan.module('resource-view-filters', function (jQuery, _) {
         '</div>',
       ].join('\n'),
       addFilterTemplate: [
-        '<a href="#">Add Filter</a>',
+        '<a class="btn btn-primary" href="#">Add Filter</a>',
       ].join('\n')
     }
   };
