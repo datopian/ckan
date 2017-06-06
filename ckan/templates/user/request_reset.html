@@ -12,10 +12,12 @@
       {% block primary_content_inner %}
       <h1 class="page-heading">{{ _('Reset your password') }}</h1>
       {% block form %}
-        <form action="" method="post" class="form-inline control-medium">
+        <form action="" method="post">
+          <div class="form-group control-medium">
           <label for="field-username">{{ _('Username') }}</label>
           <input id="field-username" name="user" value="" type="text" />
           {% block form_button %}
+          </div>
           <button class="btn btn-primary" type="submit" name="reset">{{ _("Request reset") }}</button>
           {% endblock %}
         </form>
