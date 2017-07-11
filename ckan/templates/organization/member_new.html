@@ -7,13 +7,12 @@
 {% block subtitle %}{{ _('Edit Member') if user else _('Add Member') }} - {{ super() }}{% endblock %}
 
 {% block primary_content_inner %}
-  {% link_for _('Back to all members'), controller='organization', action='members', id=organization.name, class_='btn pull-right', icon='arrow-left' %}
+  {% link_for _('Back to all members'), controller='organization', action='members', id=organization.name, class_='btn btn-default pull-right', icon='arrow-left' %}
   <h1 class="page-heading">
     {% block page_heading %}{{ _('Edit Member') if user else _('Add Member') }}{% endblock %}
   </h1>
   {% block form %}
   <form class="dataset-form add-member-form" method='post'>
-    <div class="row">
       <div class="form-group control-medium">
         {% if not user %}
           <label class="control-label" for="username">
@@ -66,7 +65,6 @@
           {{ _('Add Member') }}
         </button>
       {% endif %}        
-    </div>
   </form>
   {% endblock %}
 {% endblock %}
