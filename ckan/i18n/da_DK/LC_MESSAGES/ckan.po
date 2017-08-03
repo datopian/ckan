@@ -4145,7 +4145,7 @@ msgstr "Opret datasæt, grupper og andre spændende ting"
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
-msgstr ""
+msgstr "brugernavn"
 
 #: ckan/templates/user/new_user_form.html:6
 msgid "Full Name"
