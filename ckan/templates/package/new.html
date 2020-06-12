@@ -1,3 +1,18 @@
-{% extends "package/base_form_page.html" %}
+{% extends 'package/base.html' %}
 
 {% block subtitle %}{{ _('Create Dataset') }}{% endblock %}
+
+{% block scripts %}
+  {{super()}}
+  {% resource 'vendor/react-dataset.js' %}
+{% endblock %}
+
+
+
+  {% block primary_content_inner %}
+      <div id="dep-of-ed-admin-ui" data-config='{
+        "apiUrlOld": "{{h.url_for('api.action', ver=3, logic_function='', _external=True)}}",
+	 "apiUrl": "http://localhost:5000/api/action/package_create"
+      }'></div>
+  {% endblock %}
+
