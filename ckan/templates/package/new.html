@@ -1,1 +1,19 @@
-{% extends 'package/base_form_page.html' %}
+{% extends 'package/base.html' %}
+
+{% block secondary %}
+<aside class="secondary span3">
+</aside>
+{% endblock %}
+{% block primary %}
+<div class="primary span12">
+  {% block form %}
+  {% resource 'vendor/react-dataset.js' %}
+
+      <div style="float:right" id="dep-of-ed-admin-ui" data-config='{
+	 "apiUrl": "{{h.full_current_url()}}/../../api/3/action/package_create",
+	 "apiKey": "{{c.userobj.apikey}}"
+      }'></div>
+  {% endblock %}
+</div>
+{% endblock %}
+
